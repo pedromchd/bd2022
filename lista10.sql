@@ -4,7 +4,7 @@ DROP TABLE IF EXISTS clientes;
 DROP TABLE IF EXISTS Fones_clientes;
 
 CREATE TABLE clientes (
-  cod integer PRIMARY KEY NOT NULL CHECK (cod > 0),
+  cod integer PRIMARY KEY,
   Nome varchar(50) NOT NULL,
   endereco varchar(50) NOT NULL,
   tipo_cliente char(1) CHECK (tipo_cliente = 'F' or tipo_cliente = 'J'),
