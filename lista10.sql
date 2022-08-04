@@ -8,9 +8,9 @@ CREATE TABLE clientes (
   Nome varchar(50) NOT NULL,
   endereco varchar(50) NOT NULL,
   tipo_cliente char(1) CHECK (tipo_cliente = 'F' or tipo_cliente = 'J'),
-  RG char(15) UNIQUE,
-  CPF char(11) UNIQUE,
-  CNPJ char(14) UNIQUE,
+  RG char(15),
+  CPF char(11),
+  CNPJ char(14),
   Obs text
 );
 
@@ -24,11 +24,14 @@ INSERT INTO clientes (Nome, endereco, tipo_cliente, RG, CPF, Obs) VALUES (
 );
 
 CREATE TABLE Fones_clientes (
-  cliente integer PRIMARY KEY NOT NULL,
+  cliente integer NOT NULL,
   num_telefone char(10),
   FOREIGN KEY (cliente) REFERENCES clientes (cod)
 );
 
 INSERT INTO Fones_clientes (cliente, num_telefone) VALUES (
   1, '5899442681'
+),
+(
+  1, '8910554939'
 );
