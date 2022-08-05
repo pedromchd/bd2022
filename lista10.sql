@@ -21,6 +21,14 @@ INSERT INTO clientes (Nome, endereco, tipo_cliente, RG, CPF, Obs) VALUES (
   '8996321455',
   '44521234788',
   'AaAaAa'
+),
+(
+  "Felipe",
+  "Figueiras, 98",
+  "F",
+  "2415321201",
+  "24153212014",
+  "bbbbbbbbb"
 );
 
 CREATE TABLE Fones_clientes (
@@ -34,4 +42,7 @@ INSERT INTO Fones_clientes (cliente, num_telefone) VALUES (
 ),
 (
   1, '8910554939'
+),
+(
+  2, "4484898121"
 );
