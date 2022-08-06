@@ -9,7 +9,7 @@ CREATE TABLE clientes (
   cod INTEGER NOT NULL,
   nome VARCHAR(50) NOT NULL,
   endereco VARCHAR(50) NOT NULL,
-  tipo_cliente CHAR(1) CHECK (tipo_cliente = 'F' or tipo_cliente = 'J'),
+  tipo_cliente CHAR(1) CHECK (tipo_cliente = "F" or tipo_cliente = "J"),
   RG VARCHAR(14),
   CPF VARCHAR(11),
   CNPJ VARCHAR(14),
@@ -29,7 +29,7 @@ CREATE TABLE funcionarios (
   nome VARCHAR(50) NOT NULL,
   endereco VARCHAR(50) NOT NULL,
   CPF VARCHAR(11) NOT NULL,
-  tipo CHAR(1) CHECK (tipo = '1' or tipo = '2' or tipo = '3'),
+  tipo CHAR(1) CHECK (tipo = "1" or tipo = "2" or tipo = "3"),
   PRIMARY KEY (cod)
 );
 
@@ -64,11 +64,7 @@ CREATE TABLE itens (
   custo NUMERIC(10,2) NOT NULL,
   descricao VARCHAR(100),
   desconto NUMERIC(4,2),
-  tipo CHAR(1) CHECK (tipo = 'P' or tipo = 'S'),
+  tipo CHAR(1) CHECK (tipo = "P" or tipo = "S"),
   estoque INTEGER,
   PRIMARY KEY (cod)
 );
-
--- INSERT INTO clientes (nome, endereco, tipo_cliente) VALUES ('anderson', 'rua 143', 'F');
-
--- INSERT INTO fones_clientes (cliente, num_telefone) VALUES (1, '9090190901');
