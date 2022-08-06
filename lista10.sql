@@ -34,7 +34,7 @@ INSERT INTO clientes (Nome, endereco, tipo_cliente, RG, CPF, Obs) VALUES (
 CREATE TABLE Fones_clientes (
   cliente integer NOT NULL,
   num_telefone char(10),
-  FOREIGN KEY (cliente) REFERENCES clientes (cod)
+  FOREIGN KEY (cliente) REFERENCES clientes (cod) ON DELETE CASCADE
 );
 
 INSERT INTO Fones_clientes (cliente, num_telefone) VALUES (
