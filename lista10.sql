@@ -1,3 +1,5 @@
+PRAGMA foreign_keys = ON;
+
 DROP TABLE IF EXISTS clientes;
 DROP TABLE IF EXISTS fones_clientes;
 DROP TABLE IF EXISTS funcionarios;
