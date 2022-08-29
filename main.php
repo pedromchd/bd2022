@@ -2,7 +2,10 @@
 
 $db = new SQLite3("banco.db");
 $db->exec("PRAGMA foreign_keys = ON");
-$db->exec("INSERT INTO tabela (foo, bar) VALUES ('lorem', 'ipsum')");
+$queries = explode(";", "lista10.sql");
+foreach($queries as $query) {
+  $db->exec($query);
+};
 $db->close();
 
 ?>
