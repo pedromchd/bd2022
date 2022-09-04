@@ -7,9 +7,16 @@ $db = new SQLite3("../database.db");
 $db->exec("PRAGMA foreign_keys = ON");
 $queries = file("../sql/select.sql");
 foreach ($queries as $query) {
+  echo $query . "<br>";
   $results = $db->query($query);
   while ($row = $results->fetchArray()) {
-    echo $row["nome"];
+    foreach ($row as $key => $value) {
+      if (gettype($key) === "string") {
+        echo "{$key}: {$value} - ";
+      }
+    }
+    echo "<br>";
   }
+  echo "<br>";
 }
 $db->close();
