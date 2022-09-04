@@ -1,0 +1,14 @@
+DROP TABLE clientes;
+DROP TABLE fonesClientes;
+DROP TABLE funcionarios;
+DROP TABLE itens;
+DROP TABLE ordensServicos;
+DROP TABLE vendas;
+DROP TABLE vendasItens;
+DROP TABLE contasReceber;
+DROP TABLE ordensItens;
+DROP TABLE fornecedores;
+DROP TABLE compras;
+DROP TABLE comprasItens;
+DROP TABLE despesas;
+DROP TABLE contasPagar;
