@@ -8,18 +8,30 @@
     <script src="./tailwind.min.js"></script>
   </head>
   <body>
-    <div class="h-screen bg-neutral-900 text-neutral-100 p-3 grid place-items-center">
-      <form action="./php/drop.php">
-        <button type="submit" class="bg-blue-500 p-5 rounded-lg w-64">DROP TABLES</button>
+    <div class="h-screen bg-neutral-900 text-neutral-100 p-3 grid place-items-center grid-cols-4">
+      <form action="./php/drop.php" method="get">
+        <button type="submit" name="lista" value="11" class="bg-blue-500 p-5 rounded-lg w-64">DROP TABLES</button>
       </form>
-      <form action="./php/create.php">
-        <button type="submit" class="bg-blue-500 p-5 rounded-lg w-64">CREATE TABLES</button>
+      <form action="./php/create.php" method="get">
+        <button type="submit" name="lista" value="11" class="bg-blue-500 p-5 rounded-lg w-64">CREATE TABLES</button>
       </form>
-      <form action="./php/insert.php">
-        <button type="submit" class="bg-blue-500 p-5 rounded-lg w-64">INSERT INTO TABLES</button>
+      <form action="./php/insert.php" method="get">
+        <button type="submit" name="lista" value="11" class="bg-blue-500 p-5 rounded-lg w-64">INSERT INTO TABLES</button>
       </form>
-      <form action="./php/select.php">
-        <button type="submit" class="bg-blue-500 p-5 rounded-lg w-64">SELECT FROM TABLES</button>
+      <form action="./php/select.php" method="get">
+        <button type="submit" name="lista" value="11" class="bg-blue-500 p-5 rounded-lg w-64">SELECT FROM TABLES</button>
+      </form>
+      <form action="./php/drop.php" method="get">
+        <button type="submit" name="lista" value="12" class="bg-red-500 p-5 rounded-lg w-64">DROP TABLES</button>
+      </form>
+      <form action="./php/create.php" method="get">
+        <button type="submit" name="lista" value="12" class="bg-red-500 p-5 rounded-lg w-64">CREATE TABLES</button>
+      </form>
+      <form action="./php/insert.php" method="get">
+        <button type="submit" name="lista" value="12" class="bg-red-500 p-5 rounded-lg w-64">INSERT INTO TABLES</button>
+      </form>
+      <form action="./php/select.php" method="get">
+        <button type="submit" name="lista" value="12" class="bg-red-500 p-5 rounded-lg w-64">SELECT FROM TABLES</button>
       </form>
     </div>
   </body>
