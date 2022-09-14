@@ -1,6 +1,6 @@
 INSERT INTO novelas (nome, data_primeiro_capitulo, data_ultimo_capitulo, horario_exibicao) VALUES
   ('Mulheres de Areia', '1990-01-01', '1990-06-01', '21:00:00'),
-  ('Mistérios da Vida', '2022-01-01', '2022-04-11', '21:00:00'),
+  ('Mistérios de uma Vida', '2022-01-01', '2022-04-11', '21:00:00'),
   ('Vida da gente', '2010-01-01', '2010-04-11', '18:00:00'),
   ('Quanto mais vida melhor', '2010-01-01', '2010-04-11', '18:00:00'),
   ('Convida da gente', '2010-01-01', '2010-04-11', '18:00:00'),

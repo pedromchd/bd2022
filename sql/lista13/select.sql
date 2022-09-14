@@ -1,4 +1,4 @@
-SELECT strftime('%d/%m/%Y', max(capitulos.data_exibicao)) AS 'último capítulo' FROM capitulos JOIN novelas ON capitulos.novela = novelas.codigo WHERE novelas.nome = 'Mistérios da Vida';
+SELECT strftime('%d/%m/%Y', max(capitulos.data_exibicao)) AS 'último capítulo' FROM capitulos JOIN novelas ON capitulos.novela = novelas.codigo WHERE novelas.nome = 'Mistérios de uma Vida';
 SELECT novelas.nome FROM novelas WHERE novelas.horario_exibicao IS NULL;
 SELECT atores.nome FROM atores WHERE atores.cidade LIKE 'M%';
 SELECT count(novelas.nome) AS quantidade FROM novelas WHERE novelas.nome LIKE '%vida%';
