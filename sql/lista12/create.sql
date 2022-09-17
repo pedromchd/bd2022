@@ -1,9 +1,3 @@
-DROP TABLE IF EXISTS salas;
-DROP TABLE IF EXISTS diretores;
-DROP TABLE IF EXISTS filmes;
-DROP TABLE IF EXISTS salas_filmes;
-DROP TABLE IF EXISTS premios;
-
 CREATE TABLE salas (
   numero INTEGER NOT NULL,
   descricao TEXT NOT NULL,
