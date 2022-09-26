@@ -1,0 +1,13 @@
+SELECT Consulta.* FROM Consulta JOIN Paciente ON Consulta.pacienteCPF = Paciente.CPF WHERE strftime('%Y', Consulta.data) = '2013' AND Paciente.nome = 'Geraldo Otavio';
+SELECT Medico.nome FROM Medico JOIN MedicoEspecialidade ON Medico.CRM = MedicoEspecialidade.medicoCRM JOIN Especialidade ON MedicoEspecialidade.especialidadeID = Especialidade.ID WHERE Especialidade.nome = 'Pediatria';
+SELECT Medico.nome, count(Exame.ID) AS exames FROM Exame JOIN Medico ON Exame.medicoCRM = Medico.CRM WHERE strftime('%Y', Exame.data) = '2013' GROUP BY Medico.nome;
+SELECT Paciente.nome, sum(Exame.valor) AS totalPago FROM Exame JOIN Consulta ON Exame.consultaID = Consulta.ID JOIN Paciente ON Consulta.pacienteCPF = Paciente.CPF GROUP BY Paciente.nome;
+SELECT Paciente.nome FROM Paciente JOIN Consulta ON Paciente.CPF = Consulta.pacienteCPF JOIN Medico ON Consulta.medicoCRM = Medico.CRM WHERE Medico.nome = 'Mariana Lima' GROUP BY Paciente.nome;
+UPDATE MedicoEspecialidade SET medicoCRM = '121169' WHERE medicoCRM = '553810' AND especialidadeID = 1;
+UPDATE MedicoEspecialidade SET especialidadeID = 5 WHERE medicoCRM = '223810' AND especialidadeID = 2;
+SELECT Especialidade.nome, count(Paciente.CPF) AS pacientes FROM Paciente JOIN Consulta ON Paciente.CPF = Consulta.pacienteCPF JOIN Medico ON Consulta.medicoCRM = Medico.CRM JOIN MedicoEspecialidade ON Medico.CRM = MedicoEspecialidade.medicoCRM JOIN Especialidade ON MedicoEspecialidade.especialidadeID = Especialidade.ID GROUP BY Especialidade.nome;
+SELECT * FROM Medico ORDER BY Medico.nome ASC;
+SELECT count(*) AS pacientesCadastrados FROM Paciente;
+SELECT DISTINCT Medico.* FROM Medico JOIN Consulta ON Medico.CRM = Consulta.medicoCRM WHERE strftime('%d-%m-%Y', Consulta.data) = '10-08-2013';
+DELETE FROM Medico WHERE Medico.CRM = '223810';
+SELECT * FROM Medico;
