@@ -10,6 +10,7 @@ foreach ($queries as $query) {
   echo $query . "<br>";
   $results = $db->query($query);
   while ($row = $results->fetchArray()) {
+    // var_dump($row);
     foreach ($row as $key => $value) {
       if (gettype($key) === "string") {
         echo "{$key}: {$value} - ";
