@@ -6,7 +6,7 @@
     {
       "label": "php dev",
       "type": "shell",
-      "command": "php -S localhost:8000 -c php.ini",
+      "command": "php -S localhost:8080 -c php.ini",
       "problemMatcher": [
         "$eslint-stylish"
       ]
